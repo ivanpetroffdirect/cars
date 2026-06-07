@@ -1,31 +1,30 @@
 name: Auto Run Auto-Parser
 
-# Запускаем скрипт каждый день в 3 часа ночи по Гринвичу (или при ручном пуске)
 on:
   schedule:
     - cron: '0 3 * * *'
-  workflow_dispatch: # Позволяет запускать парсер вручную кнопкой в интерфейсе GitHub
+  workflow_dispatch:
+
+# Принудительно включаем Node.js 24 для всех шагов воркфлоу, как просит GitHub
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    # 1. Скачиваем файлы репозитория на виртуальную машину
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    # 2. Включаем Python
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
         python-version: '3.10'
 
-    # 3. Запускаем наш парсер
     - name: Run parser script
       run: python parser.py
 
-    # 4. Проверяем изменения и автоматически пушим обновленный data.json обратно в репозиторий
     - name: Commit and push if changed
       run: |
         git config --global user.name "GitHub Actions Bot"
