@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "company": "JPKorea (СПб)",
+    "brand": "Kia",
+    "model": "Sportage",
+    "title": "Kia Sportage 2.0 Дизель (Из Кореи)",
+    "meta": "Год: 2022 | Пробег: 28 000 км | Комплектация: Prestige",
+    "price": 2450000,
+    "note": "Цена под ключ во Владивостоке + доставка в СПб",
+    "link": "https://jpkorea.ru/avto-iz-korei-spb/"
+  },
+  {
+    "company": "VlAutoImport (Владивосток)",
+    "brand": "Kia",
+    "model": "Sportage",
+    "title": "Kia Sportage 2.0 Дизель (Аукцион)",
+    "meta": "Год: 2022 | Пробег: 35 000 км | Комплектация: Trendy",
+    "price": 2310000,
+    "note": "Цена в СПб с учетом автовоза (~130к)",
+    "link": "#"
+  },
+  {
+    "company": "ChinaCarClub (Москва)",
+    "brand": "Geely",
+    "model": "Monjaro",
+    "title": "Geely Monjaro 2.0T (Новый, Китай)",
+    "meta": "Год: 2024 | Пробег: 0 км | Комплектация: Luxury",
+    "price": 3150000,
+    "note": "В наличии в Москве, утильсбор включен",
+    "link": "#"
+  }
+]
